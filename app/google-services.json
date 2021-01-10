@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "39655113605",
+    "firebase_url": "https://attendance-tracker-ab-default-rtdb.firebaseio.com",
+    "project_id": "attendance-tracker-ab",
+    "storage_bucket": "attendance-tracker-ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39655113605:android:9dd2bb0ff941575c367aec",
+        "android_client_info": {
+          "package_name": "tk.jabtk.attentrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39655113605-ticlttbfbmp6nkb40qqo0l2vg8qagod6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfsedX8ghG8n7_uTIvIEq7TuU2drAhtjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39655113605-ticlttbfbmp6nkb40qqo0l2vg8qagod6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

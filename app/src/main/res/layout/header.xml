@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:layout_gravity="top"
+    android:gravity="bottom"
+    android:background="@color/darkPurple"
+    android:paddingStart="10dp"
+    tools:ignore="RtlSymmetry">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/headerUserProfile"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/ic_avatar" />
+    <TextView
+        android:id="@+id/headerUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="@string/user_name"/>
+    <TextView
+        android:id="@+id/headerUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/fadeWhite"
+        android:text="@string/prompt_email"/>
+    <TextView
+        android:id="@+id/headerUserType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/fadeWhite"
+        android:text="@string/teacher"/>
+
+
+</LinearLayout>

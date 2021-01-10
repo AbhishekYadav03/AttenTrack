@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name" translatable="false">AttenTrack</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_log_in">Log in</string>
+    <string name="action_register">Register</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="title">Welcome!</string>
+    <string name="prompt_login_here">Login Here</string>
+    <string name="prompt_already">Already Registered? </string>
+    <string name="logout">Logout</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="substring">Login and stay updated</string>
+    <string name="user_profile">User Profile</string>
+    <string name="teacher">Teacher</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="profile">Profile</string>
+    <string name="user_name">User Name</string>
+    <string name="navigation_drawer_open">Open Navigation drawer</string>
+    <string name="navigation_drawer_close">Close Navigation drawer</string>
+</resources>
