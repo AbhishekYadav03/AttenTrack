@@ -23,7 +23,7 @@ public class ConnectionDetector {
 */
 
         if (networkInfo == null) {
-            status ="disconnected";
+            status ="Hello Disconnected";
             //hello
 
         } else {
