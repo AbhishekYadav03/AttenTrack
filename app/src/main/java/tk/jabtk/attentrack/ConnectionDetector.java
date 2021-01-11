@@ -26,7 +26,7 @@ public class ConnectionDetector {
             status ="Disconnected";
 
         } else {
-            status ="abhi";
+            status ="Connected";
         }
         return status;
     }
