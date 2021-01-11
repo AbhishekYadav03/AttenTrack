@@ -24,6 +24,7 @@ public class ConnectionDetector {
 
         if (networkInfo == null) {
             status ="disconnected";
+            //hello
 
         } else {
             status = "connected";
