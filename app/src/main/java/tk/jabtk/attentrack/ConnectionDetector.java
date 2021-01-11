@@ -23,10 +23,10 @@ public class ConnectionDetector {
 */
 
         if (networkInfo == null) {
-            status ="disconnected";
+            status ="Disconnected";
 
         } else {
-            status = "connected";
+            status ="abhi";
         }
         return status;
     }
