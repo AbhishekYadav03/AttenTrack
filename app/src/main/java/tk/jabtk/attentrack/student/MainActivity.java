@@ -1,4 +1,4 @@
-package tk.jabtk.attentrack;
+package tk.jabtk.attentrack.student;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -35,6 +35,11 @@ import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import tk.jabtk.attentrack.R;
+import tk.jabtk.attentrack.professor.Teacher;
+import tk.jabtk.attentrack.professor.ForgotPassword;
+import tk.jabtk.attentrack.professor.Login;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private FirebaseUser user;
@@ -55,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.professor_main);
 
         logoutTxtBtn = findViewById(R.id.logOutBtn);
         logoutTxtBtn.setOnClickListener(new View.OnClickListener() {

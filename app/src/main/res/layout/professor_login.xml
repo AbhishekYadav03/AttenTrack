@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    tools:context=".Login">
+    tools:context=".professor.Login">
 
     <TextView
         android:id="@+id/title"
@@ -44,6 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <EditText
         android:id="@+id/username"
         android:layout_width="300dp"
@@ -61,9 +62,8 @@
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338"
+        app:layout_constraintVertical_bias="0.301"
         tools:ignore="RtlSymmetry" />
-
 
     <EditText
         android:id="@+id/pass"
@@ -131,14 +131,15 @@
 
         <TextView
             android:id="@+id/acc"
-            android:layout_width="wrap_content"
-            android:layout_height="22dp"
+            android:layout_width="157dp"
+            android:layout_height="20dp"
             android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="24dp"
             android:layout_marginTop="23dp"
-            android:layout_marginBottom="13dp"
-            android:layout_toStartOf="@+id/registerTxt"
+            android:layout_marginEnd="85dp"
+            android:layout_marginBottom="15dp"
             android:layout_toEndOf="@+id/forgot"
             android:text="Don't have an account? "
             android:textAlignment="textEnd"
@@ -150,13 +151,11 @@
         <TextView
             android:id="@+id/registerTxt"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="23dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="15dp"
             android:text="@string/action_register"
             android:textColor="@color/darkRed"
             android:textSize="16sp"

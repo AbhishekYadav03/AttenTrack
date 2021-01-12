@@ -27,6 +27,7 @@ public class ConnectionDetector {
 
         } else {
             status ="Connected";
+            ///perfect
         }
         return status;
     }

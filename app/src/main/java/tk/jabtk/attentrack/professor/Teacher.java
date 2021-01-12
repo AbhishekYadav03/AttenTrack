@@ -1,4 +1,4 @@
-package tk.jabtk.attentrack;
+package tk.jabtk.attentrack.professor;
 
 public class Teacher {
     public String name,email,userType;

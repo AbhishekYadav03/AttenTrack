@@ -11,9 +11,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import tk.jabtk.attentrack.professor.Login;
+
 public class SplashScreen extends AppCompatActivity {
     private BroadcastReceiver ConnectionReceiver;
     private static int splashTimer = 1000;
+    private static int appCloseTimer=3000;
 
 
     @Override
@@ -36,7 +39,14 @@ public class SplashScreen extends AppCompatActivity {
                 }
             }, splashTimer);
         }else {
-           Toast.makeText(this, "Connection not available. Kindly check your connectivity", Toast.LENGTH_SHORT).show();
+
+           Toast.makeText(this, "Connection not available. Kindly check your connectivity", Toast.LENGTH_LONG).show();
+           new Handler().postDelayed(new Runnable() {
+               @Override
+               public void run() {
+                   onBackPressed();
+               }
+           }, appCloseTimer);
        }
 
 
@@ -45,5 +55,17 @@ public class SplashScreen extends AppCompatActivity {
     /// Registering BroadCast
     private void broadCastRegister() {
         registerReceiver(ConnectionReceiver,new  IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(ConnectionReceiver);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        broadCastRegister();
     }
 }

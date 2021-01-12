@@ -1,4 +1,4 @@
-package tk.jabtk.attentrack;
+package tk.jabtk.attentrack.professor;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +21,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Objects;
 
+import tk.jabtk.attentrack.R;
+import tk.jabtk.attentrack.student.MainActivity;
+
 public class Register extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
 
@@ -32,7 +35,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.professor_register);
         mAuth = FirebaseAuth.getInstance();
 
         login = findViewById(R.id.loginTxt);

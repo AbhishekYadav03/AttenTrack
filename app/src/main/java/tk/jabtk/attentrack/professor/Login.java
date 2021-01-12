@@ -1,4 +1,4 @@
-package tk.jabtk.attentrack;
+package tk.jabtk.attentrack.professor;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +19,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import tk.jabtk.attentrack.student.MainActivity;
+import tk.jabtk.attentrack.R;
+
 public class Login extends AppCompatActivity implements View.OnClickListener {
     private TextView registerTxt, forgotPasswordTxt;
     private Button logInBtn;
@@ -30,7 +33,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.professor_login);
 
         registerTxt = findViewById(R.id.registerTxt);
         registerTxt.setOnClickListener(this);
@@ -47,7 +50,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         forgotPasswordTxt = findViewById(R.id.forgot);
         forgotPasswordTxt.setOnClickListener(this);
         if(mAuth.getCurrentUser()!=null && mAuth.getCurrentUser().isEmailVerified()){
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
         }
     }

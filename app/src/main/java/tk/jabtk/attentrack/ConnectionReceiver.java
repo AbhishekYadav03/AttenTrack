@@ -25,6 +25,7 @@ public class ConnectionReceiver extends BroadcastReceiver {
     }
 
 
+
     //// Method for Alert show Dialog
     public void showDialog(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);

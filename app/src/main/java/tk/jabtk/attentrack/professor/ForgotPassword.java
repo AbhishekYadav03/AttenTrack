@@ -1,7 +1,4 @@
-package tk.jabtk.attentrack;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package tk.jabtk.attentrack.professor;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +10,14 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+
+import tk.jabtk.attentrack.R;
 
 public class ForgotPassword extends AppCompatActivity {
     private EditText editTextEmailForgot;
@@ -28,7 +30,7 @@ public class ForgotPassword extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password);
+        setContentView(R.layout.professor_forgot_password);
         editTextEmailForgot = findViewById(R.id.emailForgot);
         progressBar = findViewById(R.id.progressBar);
         backBtn = findViewById(R.id.backBtn);
