@@ -22,4 +22,9 @@
     <string name="user_name">User Name</string>
     <string name="navigation_drawer_open">Open Navigation drawer</string>
     <string name="navigation_drawer_close">Close Navigation drawer</string>
+    <string name="professor_login">Professor Login</string>
+    <string name="student_login">Student Login</string>
+    <string name="admin_login">Admin Login</string>
+    <string name="password">Password</string>
+    <string name="login">login</string>
 </resources>

@@ -15,4 +15,14 @@
     <color name="jupiter">#C69B58</color>
     <color name="trans">#00FFFFFF</color>
     
+    
+    
+    
+    
+    <!--Color admin portal-->
+    <color name="skyBlue" >#1aa6b7</color>
+    <color name="red">#e74c3c</color>
+    <color name="lightRed">#f56a79</color>
+    <color name="lightGray">#d9ecf2</color>
+
 </resources>

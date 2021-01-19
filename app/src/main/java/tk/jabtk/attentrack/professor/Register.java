@@ -22,7 +22,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Objects;
 
 import tk.jabtk.attentrack.R;
-import tk.jabtk.attentrack.student.MainActivity;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
@@ -67,7 +66,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.loginTxt:
-                startActivity(new Intent(this, Login.class));
+                startActivity(new Intent(this, professorLogin.class));
+                finish();
                 break;
             case R.id.registerBtn:
                 registerUser();
@@ -114,17 +114,17 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Teacher teacher = new Teacher(name, email,userType);
-                            FirebaseDatabase.getInstance().getReference("Teachers")
+                            Professor professor = new Professor(name, email,userType);
+                            FirebaseDatabase.getInstance().getReference("Professors")
                                     .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
-                                    .setValue(teacher).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    .setValue(professor).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(Register.this, " User has been registered successfully! Check Your Email to verify your account! ", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                         //redirect to login activity
-                                        startActivity(new Intent(Register.this, Login.class));
+                                        startActivity(new Intent(Register.this, professorLogin.class));
                                         mAuth.getCurrentUser().sendEmailVerification();
                                     } else {
                                         Toast.makeText(Register.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();

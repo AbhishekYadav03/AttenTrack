@@ -1,4 +1,4 @@
-package tk.jabtk.attentrack.student;
+package tk.jabtk.attentrack.professor;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -36,9 +36,6 @@ import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 import tk.jabtk.attentrack.R;
-import tk.jabtk.attentrack.professor.Teacher;
-import tk.jabtk.attentrack.professor.ForgotPassword;
-import tk.jabtk.attentrack.professor.Login;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -67,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();//Logout
-                startActivity(new Intent(MainActivity.this, Login.class));
+                startActivity(new Intent(MainActivity.this, professorLogin.class));
                 finish();
             }
         });
@@ -81,16 +78,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Teachers");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Professors");
 
         //get Current user
         user = FirebaseAuth.getInstance().getCurrentUser();
 
         assert user != null;
         userID = user.getUid();
-        storageReference = FirebaseStorage.getInstance().getReference("TeacherProfileImages/" + userID + "/");
+        storageReference = FirebaseStorage.getInstance().getReference("ProfessorsProfileImages/" + userID + "/");
 
-        profileRef = FirebaseStorage.getInstance().getReference("TeacherProfileImages/" + userID + "/profile.jpg");
+        profileRef = FirebaseStorage.getInstance().getReference("ProfessorsProfileImages/" + userID +"/"+"profile_"+userID+".jpg" );
+
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
@@ -107,11 +105,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         databaseReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Teacher userProfile = dataSnapshot.getValue(Teacher.class);
+                Professor userProfile = dataSnapshot.getValue(Professor.class);
                 if (userProfile != null) {
                     userName = userProfile.name;
                     userEmail = userProfile.email;
                     userType =userProfile.userType;
+
                     greetingTxt.setText("Welcome,  " + userName + "!");
                     userNameTxt.setText(userName);
                     userEmailTxt.setText(userEmail);
@@ -122,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(MainActivity.this, "Something wrong happened!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Something wrong happened with database!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -175,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void uploadImage(Uri croppedImage) {
-        StorageReference fileRef = storageReference.child("profile.jpg");
+        StorageReference fileRef = storageReference.child("profile_"+userID+".jpg");
         fileRef.putFile(croppedImage).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -216,11 +215,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();//Logout
-                startActivity(new Intent(MainActivity.this, Login.class));
+                startActivity(new Intent(MainActivity.this, professorLogin.class));
                 finish();
                 break;
             case R.id.forgotPass:
-                startActivity(new Intent(MainActivity.this, ForgotPassword.class));
+                startActivity(new Intent(MainActivity.this, professorForgotPassword.class));
                 break;
 
 
@@ -228,7 +227,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-
+    // Nav Header
     public void updateHeaderProfile() {
         navigationView = findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
@@ -241,7 +240,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         databaseReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Teacher userProfile = snapshot.getValue(Teacher.class);
+                Professor userProfile=snapshot.getValue(Professor.class);
+
                 if (userProfile != null) {
                     //for user info
                     HeaderUserName.setText(userProfile.name);

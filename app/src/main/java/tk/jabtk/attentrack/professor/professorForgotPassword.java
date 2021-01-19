@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import tk.jabtk.attentrack.R;
 
-public class ForgotPassword extends AppCompatActivity {
+public class professorForgotPassword extends AppCompatActivity {
     private EditText editTextEmailForgot;
     private ImageButton backBtn;
     private Button forgotBtn;
@@ -75,10 +75,10 @@ public class ForgotPassword extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 progressBar.setVisibility(View.INVISIBLE);
                 if (task.isSuccessful()) {
-                    Toast.makeText(ForgotPassword.this, "Check Your Email to Reset Your Password! ", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(ForgotPassword.this, Login.class));
+                    Toast.makeText(professorForgotPassword.this, "Check Your Email to Reset Your Password! ", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(professorForgotPassword.this, professorLogin.class));
                 } else {
-                    Toast.makeText(ForgotPassword.this, "Error " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(professorForgotPassword.this, "Error " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });

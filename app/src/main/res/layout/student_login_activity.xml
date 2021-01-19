@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentEnd="true"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:background="@drawable/start_background"
+    tools:context=".student.studentLogin">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="120dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-black"
+                android:shadowColor="@color/darkRed"
+                android:shadowDx="25"
+                android:shadowDy="54"
+                android:shadowRadius="0"
+                android:text="@string/title"
+                android:textAlignment="center"
+                android:textColor="@color/skyBlue"
+                android:textSize="54sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:id="@+id/substring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp"
+                android:text="@string/substring"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/stEmail"
+                app:layout_constraintEnd_toEndOf="@+id/title"
+                app:layout_constraintHorizontal_bias="0.26"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/stEmail"
+                android:minWidth="300dp"
+                android:minHeight="40dp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@drawable/text_box"
+                android:hint="@string/prompt_email"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/stPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintVertical_bias="0.468" />
+
+            <EditText
+                android:id="@+id/stPassword"
+                android:minWidth="300dp"
+                android:minHeight="40dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/text_box"
+                android:hint="@string/password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/stEmail"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/stEmail"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <Button
+                android:id="@+id/stLoginBtn"
+                android:layout_width="300dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button"
+                android:text="@string/action_log_in"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stPassword"
+                app:layout_constraintVertical_bias="0.21" />
+
+            <ProgressBar
+                android:id="@+id/stProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateDrawable="@drawable/progress_bar"
+                android:indeterminateDuration="800"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/stPassword"
+                app:layout_constraintEnd_toEndOf="@+id/stEmail"
+                app:layout_constraintStart_toStartOf="@+id/stEmail"
+                app:layout_constraintTop_toBottomOf="@+id/stEmail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>

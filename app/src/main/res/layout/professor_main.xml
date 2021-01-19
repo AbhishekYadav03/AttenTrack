@@ -8,7 +8,7 @@
     android:fitsSystemWindows="false"
     android:orientation="vertical"
     android:background="@color/jupiter"
-    tools:context=".student.MainActivity"
+    tools:context=".professor.MainActivity"
     tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
@@ -120,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:background="@drawable/textbox"
+                android:background="@drawable/text_box"
                 android:enabled="false"
                 android:inputType="textEmailAddress"
                 android:paddingVertical="5dp"

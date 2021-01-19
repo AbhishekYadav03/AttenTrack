@@ -1,3 +1,4 @@
+
 package tk.jabtk.attentrack.professor;
 
 import android.content.Intent;
@@ -19,10 +20,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import tk.jabtk.attentrack.student.MainActivity;
 import tk.jabtk.attentrack.R;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class professorLogin extends AppCompatActivity implements View.OnClickListener {
     private TextView registerTxt, forgotPasswordTxt;
     private Button logInBtn;
     private EditText uEmail, uPassword;
@@ -45,10 +45,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         progressBar = findViewById(R.id.loading);
 
-
-        mAuth = FirebaseAuth.getInstance();
         forgotPasswordTxt = findViewById(R.id.forgot);
         forgotPasswordTxt.setOnClickListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
         if(mAuth.getCurrentUser()!=null && mAuth.getCurrentUser().isEmailVerified()){
             startActivity(new Intent(this, MainActivity.class));
             finish();
@@ -59,17 +59,19 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.registerTxt:
-                startActivity(new Intent(Login.this, Register.class));
+                startActivity(new Intent(professorLogin.this, Register.class));
+                finish();
                 break;
             case R.id.loginBtn:
                 userLogin();
 
                 break;
             case R.id.forgot:
-                startActivity(new Intent(Login.this, ForgotPassword.class));
+                startActivity(new Intent(professorLogin.this, professorForgotPassword.class));
                 break;
         }
     }
+
 
     protected void userLogin() {
         String email = uEmail.getText().toString().trim();
@@ -104,17 +106,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                     progressBar.setVisibility(View.GONE);
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if (user.isEmailVerified()) {
-                        Toast.makeText(Login.this, "Login Successfully", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(Login.this, MainActivity.class));
+                        Toast.makeText(professorLogin.this, "Login Successfully", Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(professorLogin.this, MainActivity.class));
                         finish();
                     } else {
                         user.sendEmailVerification();
-                        Toast.makeText(Login.this, "Check your Email to verify your account! ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(professorLogin.this, "Check your Email to verify your account! ", Toast.LENGTH_SHORT).show();
                     }
 
                 } else {
                     progressBar.setVisibility(View.GONE);
-                    Toast.makeText(Login.this, "Failed to login! " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(professorLogin.this, "Failed to login! " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });

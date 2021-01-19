@@ -11,8 +11,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import tk.jabtk.attentrack.professor.Login;
-
 public class SplashScreen extends AppCompatActivity {
     private BroadcastReceiver ConnectionReceiver;
     private static int splashTimer = 1000;
@@ -34,7 +32,7 @@ public class SplashScreen extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    startActivity(new Intent(SplashScreen.this, Login.class));
+                    startActivity(new Intent(SplashScreen.this, StartActivity.class));
                     finish();
                 }
             }, splashTimer);
