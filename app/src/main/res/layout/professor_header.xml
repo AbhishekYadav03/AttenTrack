@@ -14,7 +14,7 @@
         android:id="@+id/headerUserProfile"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/ic_avatar" />
+        android:src="@drawable/professor_ic_avatar" />
     <TextView
         android:id="@+id/headerUserName"
         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         android:textSize="14sp"
         android:layout_marginBottom="10dp"
         android:textColor="@color/fadeWhite"
-        android:text="@string/teacher"/>
+        android:text="@string/professor"/>
 
 
 </LinearLayout>

@@ -5,22 +5,20 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#000000</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="blue">#0066ff </color>
+    <color name="black">#5A5757</color>
+    <color name="blue">#0066ff</color>
     <color name="white">#FFFFFF</color>
     <color name="darkRed">#f64461</color>
     <color name="darkPurple">#11486D</color>
     <color name="chocolate">#8A686D</color>
-    <color name="fadeWhite">#CAC3C3</color>
+    <color name="fadeWhite">#AFAAB3</color>
     <color name="jupiter">#C69B58</color>
     <color name="trans">#00FFFFFF</color>
-    
-    
-    
-    
-    
-    <!--Color admin portal-->
-    <color name="skyBlue" >#1aa6b7</color>
+    <color name="headerRed">#ac3044</color>
+    <color name="gold">#fcba03</color>
+
+    <!--Old sky blue color #1aa6b7-->
+    <color name="skyBlue">#08739E</color>
     <color name="red">#e74c3c</color>
     <color name="lightRed">#f56a79</color>
     <color name="lightGray">#d9ecf2</color>

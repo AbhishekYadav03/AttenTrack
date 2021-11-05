@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/professorDashboard"
+                    android:icon="@drawable/ic_person"
+                    android:title="Dashboard" />
+                <item
+                    android:id="@+id/professorProfile"
+                    android:icon="@drawable/ic_person"
+                    android:title="@string/profile" />
+
+                <item
+                    android:id="@+id/forgotPass"
+                    android:icon="@drawable/ic_edit_24_sm"
+                    android:title="Password" />
+            </group>
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Communicate">
+            <menu>
+
+                <item
+                    android:id="@+id/share"
+                    android:icon="@drawable/ic_share"
+                    android:title="@string/share" />
+                <item
+                    android:id="@+id/rateUs"
+                    android:icon="@drawable/ic_rate_review"
+                    android:title="@string/rate_us" />
+
+            </menu>
+        </item>
+    </group>
+</menu>

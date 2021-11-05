@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name" translatable="false">AttenTrack</string>
     <string name="prompt_name">Name</string>
+    <string name="prompt_orgName">Organization Name</string>
+    <string name="prompt_FullName">Full Name</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_log_in">Log in</string>
-    <string name="action_register">Register</string>
+    <string name="action_register">Register Here</string>
     <string name="forgot_pass">Forgot Password?</string>
     <string name="forgot_password">Forgot Password</string>
     <string name="title">Welcome!</string>
@@ -15,7 +17,6 @@
     <string name="email">Email:</string>
     <string name="substring">Login and stay updated</string>
     <string name="user_profile">User Profile</string>
-    <string name="teacher">Teacher</string>
     <string name="share">Share</string>
     <string name="rate_us">Rate Us</string>
     <string name="profile">Profile</string>
@@ -27,4 +28,22 @@
     <string name="admin_login">Admin Login</string>
     <string name="password">Password</string>
     <string name="login">login</string>
+
+
+    <string name="title_activity_student_main">StudentMainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="students">Students</string>
+    <string name="professors">Professors</string>
+    <string name="professor">Professor</string>
+    <string name="administrator">Administrator</string>
+    <string name="title_activity_manage_professor">ManageProfessor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

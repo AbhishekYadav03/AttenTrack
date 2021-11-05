@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentDashboard">
+    <fragment
+        android:id="@+id/studentDashboard"
+        android:name="tk.jabtk.attentrack.student.StudentDashboard"
+        android:label="fragment_student_dashboard"
+        tools:layout="@layout/fragment_student_dashboard" >
+        <action
+            android:id="@+id/action_studentDashboard_to_studentReports"
+            app:destination="@id/studentReports" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentReports"
+        android:name="tk.jabtk.attentrack.student.StudentReports"
+        android:label="fragment_student_reports"
+        tools:layout="@layout/fragment_student_reports" />
+</navigation>

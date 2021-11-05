@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/adminDashboard">
+
+    <fragment
+        android:id="@+id/adminDashboard"
+        android:name="tk.jabtk.attentrack.admin.AdminDashboard"
+        android:label="admin_dashboard"
+        tools:layout="@layout/admin_dashboard" >
+        <action
+            android:id="@+id/action_adminDashboard_to_manageClass"
+            app:destination="@id/manageClass" />
+        <action
+            android:id="@+id/action_adminDashboard_to_manageProfessors"
+            app:destination="@id/manageProfessors" />
+        <action
+            android:id="@+id/action_adminDashboard_to_manageStudents"
+            app:destination="@id/manageStudents" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageProfessors"
+        android:name="tk.jabtk.attentrack.admin.ManageProfessors.ManageProfessors"
+        android:label="fragment_manage_professors"
+        tools:layout="@layout/fragment_manage_professors" />
+    <fragment
+        android:id="@+id/manageStudents"
+        android:name="tk.jabtk.attentrack.admin.ManageStudents.ManageStudents"
+        android:label="ManageStudents" />
+    <fragment
+        android:id="@+id/manageClass"
+        android:name="tk.jabtk.attentrack.admin.ManageClassrooms.ManageClass"
+        android:label="ManageClass" />
+</navigation>
